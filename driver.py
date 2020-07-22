@@ -1,5 +1,3 @@
-from controller_keyboard import control_keyboard
-from controller_mouse import control_mouse
 from pynput.keyboard import Listener
 # Note: pynput cannot control the keyboard and mouse within the same file, this requires double imports
 
